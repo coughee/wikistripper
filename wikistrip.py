@@ -47,8 +47,6 @@ def getFullUrlList(url):
             if lines.startswith('/wiki/L'):
                 
                 fullList.append(prefix + lines[1:])
-    for lines in fullList:
-        print lines
     return fullList
 
 def getListElements(page):
@@ -56,7 +54,6 @@ def getListElements(page):
     for lines in page:
         s = plaintext(str(lines), keep={'li'})
         if s is not None and s is not '':
-            print s
             newpage.append(s)
     return newpage
 
