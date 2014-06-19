@@ -1,0 +1,8 @@
+import urllib
+
+def getWikiData(url):
+    rawList = []
+    filehandle = urllib.urlopen(url)
+    print filehandle
+
+getWikiData('http://wikipedia.org')
